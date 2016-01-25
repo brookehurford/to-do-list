@@ -14,11 +14,15 @@ $(document).ready(function() {
     var inputtedDueDate = $("input#new-due-date").val();
     var newTask = new Task(inputtedDueDate, inputtedDetails);
 
-    $("ul#toDo").append("<li><span class='listItem'>" + newTask.fullTask() + "</span></li>");
+    $("ul#toDo").append("<li><input type='checkbox' class='listItem'>" + newTask.fullTask() + "</input><a class='remove' href='#'>X</a></li></ul>");
+
     $("input#new-details").val("");
     $("input#new-due-date").val("");
 
-
   event.preventDefault();
   });
+});
+
+$(document).on("click", ".remove", function() {
+    $(this).parent().remove();
 });

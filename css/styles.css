@@ -1,12 +1,21 @@
-#show-place {
-  display: none;
-}
-
-.place {
+.remove {
   cursor: pointer;
   color: #0088cc;
 }
 
-.place:hover {
+.remove:hover {
   text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type=checkbox] {
+  float: left;
+  margin-right: 30px;
+}
+
+.remove {
+  padding-left: 30px;
 }
